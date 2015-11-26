@@ -28,6 +28,9 @@ package org.apache.mahout.math.list;
 
 import org.apache.mahout.math.function.ObjectProcedure;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
 /**
@@ -205,6 +208,12 @@ public class ObjectArrayList<T> extends AbstractObjectList<T> {
     }
     return true;
   }
+  
+  @Override
+  public int hashCode() {
+	  return Arrays.hashCode(elements);
+  }
+
 
   /**
    * Applies a procedure to each element of the receiver, if any. Starts at index 0, moving rightwards.
