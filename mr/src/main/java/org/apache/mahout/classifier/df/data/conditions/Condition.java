@@ -37,7 +37,7 @@ public abstract class Condition {
   /**
    * Condition that checks if the given attribute has a value "equal" to the given value
    */
-  public static Condition equals(int attr, double value) {
+  public static Condition equalCondition(int attr, double value) {
     return new Equals(attr, value);
   }
   

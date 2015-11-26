@@ -59,7 +59,7 @@ public class DataTest extends MahoutTestCase {
       double[] values = classifierData.values(attr);
       double value = values[rng.nextInt(values.length)];
 
-      Data eSubset = classifierData.subset(Condition.equals(attr, value));
+      Data eSubset = classifierData.subset(Condition.equalCondition(attr, value));
       Data lSubset = classifierData.subset(Condition.lesser(attr, value));
       Data gSubset = classifierData.subset(Condition.greaterOrEquals(attr, value));
 
@@ -87,7 +87,7 @@ public class DataTest extends MahoutTestCase {
       values = regressionData.values(attr);
       value = values[rng.nextInt(values.length)];
 
-      eSubset = regressionData.subset(Condition.equals(attr, value));
+      eSubset = regressionData.subset(Condition.equalCondition(attr, value));
       lSubset = regressionData.subset(Condition.lesser(attr, value));
       gSubset = regressionData.subset(Condition.greaterOrEquals(attr, value));
 

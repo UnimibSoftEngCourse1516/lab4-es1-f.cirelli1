@@ -80,7 +80,7 @@ public final class RegressionSplitTest extends MahoutTestCase {
     split = igSplit.computeSplit(datas[1], 0);
     assertEquals(2205.0, split.getIg(), EPSILON);
     assertEquals(Double.NaN, split.getSplit(), EPSILON);
-    split = igSplit.computeSplit(datas[1].subset(Condition.equals(0, 0.0)), 1);
+    split = igSplit.computeSplit(datas[1].subset(Condition.equalCondition(0, 0.0)), 1);
     assertEquals(250.0, split.getIg(), EPSILON);
     assertEquals(41.0, split.getSplit(), EPSILON);
   }

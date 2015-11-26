@@ -142,7 +142,7 @@ public class DefaultTreeBuilder implements TreeBuilder {
       Node[] children = new Node[values.length];
 
       for (int index = 0; index < values.length; index++) {
-        Data subset = data.subset(Condition.equals(best.getAttr(), values[index]));
+        Data subset = data.subset(Condition.equalCondition(best.getAttr(), values[index]));
         children[index] = build(rng, subset);
       }
 

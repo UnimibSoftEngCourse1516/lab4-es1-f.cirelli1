@@ -277,7 +277,7 @@ public class DecisionTreeBuilder implements TreeBuilder {
         if (complemented && !subsetValues.contains(values[index])) {
           continue;
         }
-        subsets[index] = data.subset(Condition.equals(best.getAttr(), values[index]));
+        subsets[index] = data.subset(Condition.equalCondition(best.getAttr(), values[index]));
         if (subsets[index].size() >= minSplitNum) {
           cnt++;
         }

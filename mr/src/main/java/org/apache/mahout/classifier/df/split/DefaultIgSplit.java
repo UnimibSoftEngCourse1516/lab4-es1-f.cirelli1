@@ -64,7 +64,7 @@ public class DefaultIgSplit extends IgSplit {
     double invDataSize = 1.0 / data.size();
     
     for (double value : values) {
-      Data subset = data.subset(Condition.equals(attr, value));
+      Data subset = data.subset(Condition.equalCondition(attr, value));
       hyx += subset.size() * invDataSize * entropy(subset);
     }
     
