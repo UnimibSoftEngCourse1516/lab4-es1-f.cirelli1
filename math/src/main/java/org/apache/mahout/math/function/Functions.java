@@ -1383,7 +1383,7 @@ public final class Functions {
   }
 
   /** Constructs a function that returns <tt>a == b ? 1 : 0</tt>. <tt>a</tt> is a variable, <tt>b</tt> is fixed. */
-  public static DoubleFunction equals(final double b) {
+  public static DoubleFunction equalsDoubleFunction(final double b) {
     return new DoubleFunction() {
 
       @Override
