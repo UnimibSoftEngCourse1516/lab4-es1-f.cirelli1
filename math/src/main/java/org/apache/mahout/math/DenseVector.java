@@ -242,6 +242,12 @@ public class DenseVector extends AbstractVector {
     }
     return super.equals(o);
   }
+  
+  @Override
+  public int hashCode() {
+	 return Arrays.hashCode(values);
+  }
+
 
   public void addAll(Vector v) {
     if (size() != v.size()) {
