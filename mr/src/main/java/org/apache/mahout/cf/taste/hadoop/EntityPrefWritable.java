@@ -73,7 +73,7 @@ public final class EntityPrefWritable extends VarLongWritable implements Cloneab
       return false;
     }
     EntityPrefWritable other = (EntityPrefWritable) o;
-    return get() == other.get() && prefValue == other.getPrefValue();
+    return get() == other.get() && prefValue > (other.getPrefValue() - 0.000001) && prefValue < (other.getPrefValue() + 0.000001);
   }
 
   @Override
